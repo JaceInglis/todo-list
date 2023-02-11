@@ -3,7 +3,11 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <h1>Todo List</h1>
+      <header>
+        <h1>Todo List</h1>
+        <p>Todays Items</p>
+      </header>
+      
     </div>
   );
 }
