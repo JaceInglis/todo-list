@@ -19,7 +19,7 @@ const App = () => {
         <label>What needs to be done?</label>
       </h2>
       
-      <input type="text" name='task' />
+      <input type="text" name="task" />
       <input type="submit" value="Add" />
     </form>
 
