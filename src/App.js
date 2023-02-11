@@ -7,7 +7,13 @@ const App = () => {
         <h1>Todo List</h1>
         <p>Todays Items</p>
       </header>
-      
+
+    <div className="list-container">
+      <ul>
+        <li>Finish todo list</li>
+      </ul>
+    </div>
+
     </div>
   );
 }
