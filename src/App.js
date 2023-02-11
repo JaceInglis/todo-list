@@ -9,8 +9,8 @@ const App = () => {
       </header>
 
     <div className="list-container">
-      <ul>
-        <li>Finish todo list</li>
+      <ul role="list">
+
       </ul>
     </div>
 
