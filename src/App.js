@@ -10,7 +10,7 @@ const App = () => {
 
     <div className="list-container">
       <ul role="list">
-
+        <li>Example task</li>
       </ul>
     </div>
 
