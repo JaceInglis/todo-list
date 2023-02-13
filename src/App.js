@@ -1,7 +1,10 @@
+import { useState } from 'react';
 import './App.css';
 import AddTodo from './components/AddTodo/AddTodo';
 
 const App = () => {
+  const [tasks, setTasks] = useState();
+
   return (
     <div className="App">
       <header>
