@@ -5,6 +5,10 @@ import AddTodo from './components/AddTodo/AddTodo';
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
+  const addTask = (task) => {
+  
+  }
+
   return (
     <div className="App">
       <header>
