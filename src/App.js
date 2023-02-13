@@ -1,4 +1,5 @@
 import './App.css';
+import AddTodo from './components/AddTodo/AddTodo';
 
 const App = () => {
   return (
@@ -13,7 +14,7 @@ const App = () => {
         <li>Example task</li>
       </ul>
     </div>
-    
+
     </div>
   );
 }
