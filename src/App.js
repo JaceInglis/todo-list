@@ -21,7 +21,7 @@ const App = () => {
         <li>Example task</li>
       </ul>
     </div>
-
+    <AddTodo />
     </div>
   );
 }

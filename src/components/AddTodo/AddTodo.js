@@ -3,6 +3,10 @@ import React, { useState } from 'react'
 function AddTodo() {
     const [item, setItem] = useState('');
 
+  const handleChange = (e) => {
+    setItem(e.target.value);
+  }
+
   const handleSubmit = (e) => {
     setItem(e.target.value);
   }
@@ -13,7 +17,7 @@ function AddTodo() {
         <label>What needs to be done?</label>
       </h2>
       
-      <input type="text" name="task" />
+      <input type="text" name="task" onChange={handleChange} />
       <input type="submit" value="Add" />
     </form>
   )
