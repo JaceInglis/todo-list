@@ -3,8 +3,12 @@ import React, { useState } from 'react'
 function AddTodo() {
     const [item, setItem] = useState('');
 
+  const handleSubmit = (e) => {
+    setItem(e.target.value);
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2 className="lable-wrapper">
         <label>What needs to be done?</label>
       </h2>
