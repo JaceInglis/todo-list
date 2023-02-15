@@ -6,7 +6,7 @@ const App = () => {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
-  
+    setTasks([...tasks, task])
   }
 
   return (
@@ -21,7 +21,7 @@ const App = () => {
         <li>Example task</li>
       </ul>
     </div>
-    <AddTodo />
+    <AddTodo addTask={addTask}/>
     </div>
   );
 }
