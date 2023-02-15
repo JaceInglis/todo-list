@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-function AddTodo() {
+function AddTodo({ addTask }) {
     const [item, setItem] = useState('');
 
   const handleChange = (e) => {
     setItem(e.target.value);
   }
 
-  const handleSubmit = (e) => {
-    setItem(e.target.value);
+  const handleSubmit = () => {
+    
   }
 
   return (
