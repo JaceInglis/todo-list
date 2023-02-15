@@ -7,8 +7,11 @@ function AddTodo({ addTask }) {
     setItem(e.target.value);
   }
 
-  const handleSubmit = () => {
-    
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    addTask(item);
+
+    setItem('');
   }
 
   return (
