@@ -12,6 +12,7 @@ function AddTodo({ addTask }) {
     addTask(item);
 
     setItem('');
+    
   }
 
   return (
@@ -20,7 +21,7 @@ function AddTodo({ addTask }) {
         <label>What needs to be done?</label>
       </h2>
       
-      <input type="text" name="task" onChange={handleChange} />
+      <input type="text" name="task" value={item} onChange={handleChange} />
       <input type="submit" value="Add" />
     </form>
   )
