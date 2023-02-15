@@ -5,8 +5,10 @@ import AddTodo from './components/AddTodo/AddTodo';
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
+  let nextId = 0;
+
   const addTask = (task) => {
-    setTasks([...tasks, task])
+    setTasks([...tasks, { id: nextId++, task: task }]);
   }
 
   return (
