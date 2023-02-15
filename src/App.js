@@ -2,13 +2,13 @@ import { useState } from 'react';
 import './App.css';
 import AddTodo from './components/AddTodo/AddTodo';
 
+let nextId = 0;
+
 const App = () => {
   const [tasks, setTasks] = useState([]);
 
-  let nextId = 0;
-
   const addTask = (task) => {
-    setTasks([...tasks, { id: nextId++, task: task }]);
+    setTasks([...tasks, { id: nextId += 1, task: task }]);
   }
 
   return (
