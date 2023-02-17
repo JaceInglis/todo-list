@@ -1,6 +1,16 @@
+import { useState } from 'react';
 import './App.css';
+import AddTodo from './components/AddTodo/AddTodo';
+
+let nextId = 0;
 
 const App = () => {
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (task) => {
+    setTasks([...tasks, { id: nextId += 1, task: task }]);
+  }
+
   return (
     <div className="App">
       <header>
@@ -13,16 +23,7 @@ const App = () => {
         <li>Example task</li>
       </ul>
     </div>
-
-    <form>
-      <h2 className="lable-wrapper">
-        <label>What needs to be done?</label>
-      </h2>
-      
-      <input type="text" name="task" />
-      <input type="submit" value="Add" />
-    </form>
-
+    <AddTodo addTask={addTask}/>
     </div>
   );
 }
