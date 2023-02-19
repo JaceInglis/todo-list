@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function RenderTodos() {
+function RenderTodos({ tasks }) {
   return (
     
   )

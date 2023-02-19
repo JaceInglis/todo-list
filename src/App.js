@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import AddTodo from './components/AddTodo/AddTodo';
+import RenderTodos from './components/RenderTodos/RenderTodos';
 
 let nextId = 0;
 
@@ -22,6 +23,7 @@ const App = () => {
       <ul role="list">
         <li>Example task</li>
       </ul>
+      <RenderTodos tasks={tasks}/>
     </div>
     <AddTodo addTask={addTask}/>
     </div>
