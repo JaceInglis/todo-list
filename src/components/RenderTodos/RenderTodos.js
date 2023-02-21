@@ -4,7 +4,7 @@ function RenderTodos({ tasks }) {
   return (
     <ul>
      {tasks.map(task => {
-        <li key={task.id}>{task.task}</li>
+        return <li key={task.id}>{task.task}</li>
     })}
     </ul>
   )
