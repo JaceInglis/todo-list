@@ -20,9 +20,6 @@ const App = () => {
       </header>
 
     <div className="list-container">
-      <ul role="list">
-        <li>Example task</li>
-      </ul>
       <RenderTodos tasks={tasks}/>
     </div>
     <AddTodo addTask={addTask}/>
