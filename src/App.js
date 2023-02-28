@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import AddTodo from './components/AddTodo/AddTodo';
+import TodoForm from './components/TodoForm/TodoForm';
+import TodoList from './components/TodoList/TodoList';
 
 let nextId = 0;
 
@@ -19,11 +20,9 @@ const App = () => {
       </header>
 
     <div className="list-container">
-      <ul role="list">
-        <li>Example task</li>
-      </ul>
+      <TodoList tasks={tasks}/>
     </div>
-    <AddTodo addTask={addTask}/>
+    <TodoForm addTask={addTask}/>
     </div>
   );
 }

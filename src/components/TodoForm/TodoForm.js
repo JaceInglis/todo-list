@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function AddTodo({ addTask }) {
+function TodoForm({ addTask }) {
     const [item, setItem] = useState('');
 
   const handleChange = (e) => {
@@ -27,4 +27,4 @@ function AddTodo({ addTask }) {
   )
 }
 
-export default AddTodo
+export default TodoForm
