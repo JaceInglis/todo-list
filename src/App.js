@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import AddTodo from './components/AddTodo/AddTodo';
-import RenderTodos from './components/RenderTodos/RenderTodos';
+import AddTodo from './components/TodoForm/TodoForm';
+import RenderTodos from './components/TodoList/TodoList';
 
 let nextId = 0;
 
