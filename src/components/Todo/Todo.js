@@ -1,5 +1,4 @@
 import React from 'react'
-import todo
 
 function Todo() {
   return (
