@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import AddTodo from './components/TodoForm/TodoForm';
-import RenderTodos from './components/TodoList/TodoList';
+import TodoForm from './components/TodoForm/TodoForm';
+import TodoList from './components/TodoList/TodoList';
 
 let nextId = 0;
 
@@ -20,9 +20,9 @@ const App = () => {
       </header>
 
     <div className="list-container">
-      <RenderTodos tasks={tasks}/>
+      <TodoList tasks={tasks}/>
     </div>
-    <AddTodo addTask={addTask}/>
+    <TodoForm addTask={addTask}/>
     </div>
   );
 }

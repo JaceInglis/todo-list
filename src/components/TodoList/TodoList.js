@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function RenderTodos({ tasks }) {
+function TodoList({ tasks }) {
 
   return (
     <ul>
@@ -11,4 +11,4 @@ function RenderTodos({ tasks }) {
   )
 }
 
-export default RenderTodos
+export default TodoList
