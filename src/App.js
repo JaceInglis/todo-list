@@ -1,15 +1,8 @@
-import { useState } from 'react';
+import React from 'react';
 import './App.css';
-import AddTodo from './components/AddTodo/AddTodo';
-
-let nextId = 0;
+import TodoList from './components/TodoList/TodoList';
 
 const App = () => {
-  const [tasks, setTasks] = useState([]);
-
-  const addTask = (task) => {
-    setTasks([...tasks, { id: nextId += 1, task: task }]);
-  }
 
   return (
     <div className="App">
@@ -17,13 +10,8 @@ const App = () => {
         <h1>Todo List</h1>
         <h2>List Title</h2>
       </header>
-
-    <div className="list-container">
-      <ul role="list">
-        <li>Example task</li>
-      </ul>
-    </div>
-    <AddTodo addTask={addTask}/>
+      
+      <TodoList />
     </div>
   );
 }
