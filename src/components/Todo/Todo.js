@@ -1,11 +1,10 @@
 import React from 'react'
 
-function Todo() {
-  return (
-    <div>
+function Todo({ tasks }) {
 
-    </div>
-  )
+  return tasks?.map(task => (
+    <div key={task.id}>{task.task}</div>
+  ))
 }
 
 export default Todo

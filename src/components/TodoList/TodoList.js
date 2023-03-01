@@ -1,13 +1,22 @@
 import React, { useState } from 'react'
+import Todo from '../Todo/Todo';
+import TodoForm from '../TodoForm/TodoForm';
 
-function TodoList({ tasks }) {
+let nextId = 0;
+
+function TodoList() {
+
+  const [tasks, setTasks] = useState([]);
+
+  const addTask = (task) => {
+    setTasks([...tasks, { id: nextId += 1, task: task }]);
+  }
 
   return (
-    <ul>
-     {tasks.map(task => {
-        return <li key={task.id}>{task.task}</li>
-    })}
-    </ul>
+    <div>
+      <TodoForm addTask={addTask} />
+      <Todo tasks={tasks}/>
+    </div>
   )
 }
 
