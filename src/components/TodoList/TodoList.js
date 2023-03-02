@@ -12,10 +12,16 @@ function TodoList() {
     setTasks([...tasks, { id: nextId += 1, task: task }]);
   }
 
+  const removeTask = (id) => {
+    setTasks(prevTasks => {
+      return prevTasks.filter(task => task.id !== id)
+    })
+  };
+
   return (
     <div>
       <TodoForm addTask={addTask} />
-      <Todo tasks={tasks}/>
+      <Todo tasks={tasks} removeTask={removeTask}/>
     </div>
   )
 }
