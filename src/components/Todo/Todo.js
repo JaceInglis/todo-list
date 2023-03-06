@@ -1,9 +1,16 @@
 import React from 'react'
 
-function Todo({ tasks }) {
+import { CiCircleRemove } from 'react-icons/ci';
 
-  return tasks?.map(task => (
+function Todo({ tasks, removeTask }) {
+
+  return tasks?.map((task) => (
+    <>
     <div key={task.id}>{task.task}</div>
+    <div>
+      <CiCircleRemove onClick={() => removeTask(task.id)}/>
+    </div>
+    </>
   ))
 }
 
