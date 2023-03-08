@@ -1,6 +1,5 @@
 .todo-wrapper {
     font-family: 'Open Sans', sans-serif;
-    width: 20vw;
     display: flex;
     justify-content: space-between;
     background: #9d5fd4;
@@ -10,5 +9,5 @@
     color: #fff;
     font-size: calc(1rem + 0.4vw);
     margin-top: 1.5vw;
-    line-height: 16px;
+    line-height: 18px;
 }
