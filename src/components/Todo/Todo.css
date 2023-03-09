@@ -11,6 +11,12 @@
     margin-top: 1.5vw;
     line-height: 18px;
     width: 24vw;
+    text-align: left;
+}
+
+.todo {
+    overflow: hidden;
+    width: 23vw;
 }
 
 .remove-button {
