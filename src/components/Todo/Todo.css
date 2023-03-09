@@ -2,7 +2,7 @@
     font-family: 'Open Sans', sans-serif;
     display: flex;
     justify-content: space-between;
-    background: #9d5fd4;
+    background: #F95E27;
     border-radius: 8px;
     align-items: center;
     padding: 6px;
@@ -10,4 +10,13 @@
     font-size: calc(1rem + 0.4vw);
     margin-top: 1.5vw;
     line-height: 18px;
+}
+
+.remove-button {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.remove-button:hover {
+    color: #8A9499;
 }

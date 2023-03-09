@@ -8,7 +8,7 @@ function Todo({ tasks, removeTask }) {
   return tasks?.map((task) => (
     <div className='todo-wrapper'>
       <div key={task.id}>{task.task}</div>
-        <CiCircleRemove onClick={() => removeTask(task.id)}/>
+        <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
     </div>
   ))
 }
