@@ -32,9 +32,6 @@
 
 }
 
-.todos {
-}
-
 @media only screen and (max-width: 850px) {
     .list-wrapper {
         font-size: 13px;
