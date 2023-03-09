@@ -1,16 +1,19 @@
 * {
     margin: 0px;
     padding: 0px;
+    font-family: "Open Sans", sans-serif;
 }
 
 .list-wrapper {
     display: flex;
-    border: 1px solid;
     width: 30vw;
-    justify-content: center;
+    height: 80vh;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    font-size: 20px;
+    background-color: #26282F;
+    color: #fff;
 }
 
 .App {
@@ -18,8 +21,23 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(#8A9499, #30A6DD);
 }
 
-header {
-    margin: 1vw
+.title {
+    margin-bottom: 30px;
+    background: #F95E27;
+    width: 100%;
+    padding: 20px 0px;
+
+}
+
+.todos {
+}
+
+@media only screen and (max-width: 850px) {
+    .list-wrapper {
+        font-size: 13px;
+        width: 50vw;
+    }
 }

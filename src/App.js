@@ -7,11 +7,10 @@ const App = () => {
   return (
     <div className="App">
       <div className='list-wrapper'>
-        <header>
-          <h1>Todo List</h1>
-          <h2>List Title</h2>
-        </header>
-        <TodoList />
+        <h1 className='title'>Todo List</h1>
+        <div className='todos'>
+          <TodoList />
+        </div>
       </div>
     </div>
   );
