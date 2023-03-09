@@ -25,4 +25,5 @@
 
 .remove-button:hover {
     color: #8A9499;
+    cursor: pointer;
 }
