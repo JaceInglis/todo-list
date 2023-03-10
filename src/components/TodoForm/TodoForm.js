@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { AiOutlinePlus } from 'react-icons/ai'
 
 function TodoForm({ addTask }) {
   const [item, setItem] = useState('');
@@ -21,7 +22,9 @@ function TodoForm({ addTask }) {
         <label>What needs to be done?</label>
       </h2>
       <input type="text" name="task" value={item} onChange={handleChange} />
-      <input type="submit" value="Add" />
+      <button type='submit'>
+        <AiOutlinePlus />
+      </button>
     </form>
   )
 }
