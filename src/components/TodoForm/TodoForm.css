@@ -1,0 +1,46 @@
+button {
+    padding: 0px;
+    background: none;
+    border: none;
+}
+
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form input {
+    width:  12vw;
+    padding: 5px;
+}
+
+.add-button {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    left: 0.5px;
+    color: white;
+    width: 25px;
+    height: 25px;
+    transition: 0.3s;
+}
+
+.add-button:hover {
+    color: #8A9499;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 850px) {
+    .form input {
+        width: 20vw;
+        padding: 0px;
+    }
+
+    .add-button {
+        width: 20px;
+        height: 20px;
+    }
+}

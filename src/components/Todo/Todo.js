@@ -1,16 +1,15 @@
 import React from 'react'
+import './Todo.css';
 
 import { CiCircleRemove } from 'react-icons/ci';
 
 function Todo({ tasks, removeTask }) {
 
   return tasks?.map((task) => (
-    <>
-    <div key={task.id}>{task.task}</div>
-    <div>
-      <CiCircleRemove onClick={() => removeTask(task.id)}/>
+    <div className='todo-wrapper'>
+      <div className='todo' key={task.id}>{task.task}</div>
+        <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
     </div>
-    </>
   ))
 }
 

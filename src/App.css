@@ -1,0 +1,23 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#fff, #8A9499);
+}
+
+.title {
+    margin-bottom: 30px;
+    background: #F95E27;
+    width: 100%;
+    padding: 20px 0px;
+
+}
+

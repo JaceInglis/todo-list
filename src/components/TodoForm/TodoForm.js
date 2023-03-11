@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { HiOutlinePlusCircle } from 'react-icons/hi'
+import './TodoForm.css'
 
 function TodoForm({ addTask }) {
   const [item, setItem] = useState('');
@@ -20,8 +22,12 @@ function TodoForm({ addTask }) {
       <h2 className="lable-wrapper">
         <label>What needs to be done?</label>
       </h2>
-      <input type="text" name="task" value={item} onChange={handleChange} />
-      <input type="submit" value="Add" />
+      <div className='form'>
+        <input type="text" name="task" value={item} onChange={handleChange} />
+        <button type='submit'>
+          <HiOutlinePlusCircle className='add-button' />
+        </button>
+      </div>
     </form>
   )
 }

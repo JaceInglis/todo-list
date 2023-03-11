@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Todo from '../Todo/Todo';
 import TodoForm from '../TodoForm/TodoForm';
+import './TodoList.css'
 
 let nextId = 0;
 
@@ -19,7 +20,7 @@ function TodoList() {
   };
 
   return (
-    <div>
+    <div className='list-wrapper'>
       <TodoForm addTask={addTask} />
       <Todo tasks={tasks} removeTask={removeTask}/>
     </div>

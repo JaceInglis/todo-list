@@ -6,12 +6,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <header>
-        <h1>Todo List</h1>
-        <h2>List Title</h2>
-      </header>
-      
-      <TodoList />
+      <div className='list-wrapper'>
+        <h1 className='title'>Todo List</h1>
+          <TodoList />
+      </div>
     </div>
   );
 }

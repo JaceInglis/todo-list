@@ -1,0 +1,35 @@
+.todo-wrapper {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    background: #F95E27;
+    border-radius: 8px;
+    align-items: center;
+    padding: 6px;
+    color: #fff;
+    font-size: calc(1rem + 0.4vw);
+    margin-top: 1.5vw;
+    width: 24vw;
+    text-align: left;
+}
+
+.todo {
+    overflow: hidden;
+    width: 23vw;
+}
+
+.remove-button {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.remove-button:hover {
+    color: #8A9499;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 850px) {
+    .todo-wrapper {
+        width: 40vw;
+    }
+}
