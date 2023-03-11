@@ -27,3 +27,9 @@
     color: #8A9499;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 850px) {
+    .todo-wrapper {
+        width: 40vw;
+    }
+}
