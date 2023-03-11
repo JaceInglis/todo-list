@@ -19,11 +19,11 @@ function TodoForm({ addTask }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 className="lable-wrapper">
+      <h2 className='lable-wrapper'>
         <label>What needs to be done?</label>
       </h2>
       <div className='form'>
-        <input type="text" name="task" value={item} onChange={handleChange} />
+        <input type="text" name="task" value={item} onChange={handleChange} required/>
         <button type='submit'>
           <HiOutlinePlusCircle className='add-button' />
         </button>
