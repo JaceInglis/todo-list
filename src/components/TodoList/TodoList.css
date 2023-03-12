@@ -8,6 +8,7 @@
     font-size: 20px;
     background-color: #26282F;
     color: #fff;
+    overflow-y: auto;
 }
 
 @media only screen and (max-width: 850px) {
