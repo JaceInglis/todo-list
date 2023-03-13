@@ -3,7 +3,7 @@ import './Todo.css';
 
 import { CiCircleRemove } from 'react-icons/ci';
 
-function Todo({ tasks, removeTask }) {
+function Todo({ tasks, removeTask, editTask }) {
 
   return tasks?.map((task) => (
     <div className='todo-wrapper'>

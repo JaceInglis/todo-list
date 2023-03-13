@@ -19,10 +19,14 @@ function TodoList() {
     })
   };
 
+  const editTask = (id, editedTask) => {
+    setTasks([...tasks, { id: id, task: editedTask }])
+  }
+
   return (
     <div className='list-wrapper'>
       <TodoForm addTask={addTask} />
-      <Todo tasks={tasks} removeTask={removeTask}/>
+      <Todo tasks={tasks} removeTask={removeTask} editTask={editTask} />
     </div>
   )
 }
