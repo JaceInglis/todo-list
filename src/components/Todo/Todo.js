@@ -5,14 +5,16 @@ import { CiEdit } from 'react-icons/ci'
 import { CiCircleRemove } from 'react-icons/ci';
 
 function Todo({ tasks, removeTask, editTask }) {
+  const [editing, setEditing] = useState(null);
 
-  return tasks?.map((task) => (
-    <div className='todo-wrapper'>
-      <div className='todo' key={task.id}>{task.task}</div>
-        <CiEdit className='edit-button' />
-        <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
-    </div>
-  ))
+  return (
+    tasks.map((task) => (
+      <div className='todo-wrapper' key={task.id}>
+        <div className='todo'>{editing === task.id? <form><input></input></form> : task.task}</div>
+          <CiEdit className='edit-button' onClick={() => setEditing(task.id)}/>
+          <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
+      </div>
+  )))
 }
 
 export default Todo
