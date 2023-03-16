@@ -20,7 +20,7 @@ function TodoList() {
   };
 
   const editTask = (id, editedTask) => {
-    setTasks([...tasks, { id: id, task: editedTask }])
+    setTasks(prevTasks => prevTasks.map(task => task.id === id ? {id:id, task:editedTask} : {id:task.id, task:task.task}))
   }
 
   return (

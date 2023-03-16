@@ -12,11 +12,18 @@ function Todo({ tasks, removeTask, editTask }) {
     setEditText(e.target.value);
   }
 
+  const handleSubmit = (e, id) => {
+    e.preventDefault()
+    editTask(id, editText)
+
+    setEditText('')
+    setEditing(0)
+  }
 
   return (
     tasks.map((task) => (
       <div className='todo-wrapper' key={task.id}>
-        <div className='todo'>{editing === task.id? <form><input onChange={handleChange}></input></form> : task.task}</div>
+        <div className='todo'>{editing === task.id? <form onSubmit={ (e) => handleSubmit(e, task.id, editText)}><input onChange={handleChange} /></form> : task.task}</div>
           <CiEdit className='edit-button' onClick={() => setEditing(task.id)}/>
           <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
       </div>
