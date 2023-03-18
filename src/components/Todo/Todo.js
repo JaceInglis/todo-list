@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './Todo.css';
 import { TbEditCircle, TbEditCircleOff } from 'react-icons/tb'
 
-import { CiCircleRemove } from 'react-icons/ci';
+import { CgRemove } from 'react-icons/cg';
 
 function Todo({ tasks, removeTask, editTask }) {
   const [editing, setEditing] = useState(null);
@@ -34,7 +34,7 @@ function Todo({ tasks, removeTask, editTask }) {
           {editing === task.id
           ? <TbEditCircleOff className='cancle' onClick={() => setEditing(null)}/> 
           : <TbEditCircle className='edit-button' onClick={() => setEditing(task.id)}/>}
-          <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
+          <CgRemove className='remove-button' onClick={() => removeTask(task.id)}/>
       </div>
   )))
 }
