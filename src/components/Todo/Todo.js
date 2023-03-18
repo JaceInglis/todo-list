@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './Todo.css';
-import { CiEdit } from 'react-icons/ci'
+import { TbEditCircle, TbEditCircleOff } from 'react-icons/tb'
 
 import { CiCircleRemove } from 'react-icons/ci';
 
@@ -28,12 +28,12 @@ function Todo({ tasks, removeTask, editTask }) {
           ? 
           <form className='edit-form' onSubmit={ (e) => handleSubmit(e, task.id, editText)}>
             <input className='edit-input' autoFocus placeholder={task.task} required onChange={handleChange} />
-            <CiCircleRemove className='cancle' onClick={() => setEditing(0)}/>
           </form> 
           : task.task}
         </div>
-
-          <CiEdit className='edit-button' onClick={() => setEditing(task.id)}/>
+          {editing === task.id
+          ? <TbEditCircleOff className='cancle' onClick={() => setEditing(null)}/> 
+          : <TbEditCircle className='edit-button' onClick={() => setEditing(task.id)}/>}
           <CiCircleRemove className='remove-button' onClick={() => removeTask(task.id)}/>
       </div>
   )))
