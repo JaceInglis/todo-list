@@ -23,19 +23,7 @@
     cursor: default;
 }
 
-.remove-button:hover {
-    transition: 0.3s;
-    color: #8A9499;
-    cursor: pointer;
-}
-
-.edit-button:hover {
-    transition: 0.3s;
-    color: #8A9499;
-    cursor: pointer;
-}
-
-.cancle:hover {
+:where(.remove-button, .cancle, .edit-button):hover {
     transition: 0.3s;
     color: #8A9499;
     cursor: pointer;
