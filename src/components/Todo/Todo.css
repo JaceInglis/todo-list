@@ -9,6 +9,7 @@
     color: #fff;
     font-size: calc(1rem + 0.4vw);
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .todo-wrapper div {
