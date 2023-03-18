@@ -14,7 +14,6 @@ function TodoForm({ addTask }) {
     addTask(item);
 
     setItem('');
-    
   }
 
   return (

@@ -19,10 +19,14 @@ function TodoList() {
     })
   };
 
+  const editTask = (id, editedTask) => {
+    setTasks(prevTasks => prevTasks.map(task => task.id === id ? {id:id, task:editedTask} : {id:task.id, task:task.task}))
+  }
+
   return (
     <div className='list-wrapper'>
       <TodoForm addTask={addTask} />
-      <Todo tasks={tasks} removeTask={removeTask}/>
+      <Todo tasks={tasks} removeTask={removeTask} editTask={editTask} />
     </div>
   )
 }
