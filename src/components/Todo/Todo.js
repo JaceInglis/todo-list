@@ -26,8 +26,8 @@ function Todo({ tasks, removeTask, editTask }) {
         <div className='todo'>
           {editing === task.id
           ? 
-          <form onSubmit={ (e) => handleSubmit(e, task.id, editText)}>
-            <input required onChange={handleChange} />
+          <form className='edit-form' onSubmit={ (e) => handleSubmit(e, task.id, editText)}>
+            <input className='edit-input' autoFocus placeholder={task.task} required onChange={handleChange} />
             <CiCircleRemove className='cancle' onClick={() => setEditing(0)}/>
           </form> 
           : task.task}

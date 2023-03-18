@@ -5,27 +5,56 @@
     background: #F95E27;
     border-radius: 8px;
     align-items: center;
-    padding: 6px;
+    padding: 7px;
     color: #fff;
     font-size: calc(1rem + 0.4vw);
-    margin-bottom: 20px;
-    width: 24vw;
     text-align: left;
 }
 
+.todo-wrapper div {
+    width: 21vw;
+}
+
 .todo {
+    display: flex;
+    align-items: center;
     overflow: hidden;
     width: 23vw;
+    cursor: default;
 }
 
-.remove-button {
-    color: #fff;
+:where(.remove-button, .cancle, .edit-button):hover {
     transition: 0.3s;
-}
-
-.remove-button:hover {
     color: #8A9499;
     cursor: pointer;
+}
+
+.edit-form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.edit-input {
+    background: none;
+    border: none;
+    border: 0px;
+    color: #fff;
+    cursor: text;
+    width: 16vw;
+    height: 100%;
+    font-size: calc(1rem + 0.4vw)
+    
+}
+
+.edit-input:focus {
+    outline: none;
+  }
+  
+
+.edit-input::placeholder {
+    color: white;
+    font-size: calc(1rem + 0.4vw);
 }
 
 @media only screen and (max-width: 850px) {
