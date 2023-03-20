@@ -21,12 +21,9 @@
     background: #ff7543;
 }
 
-.todo:hover {
-    cursor: pointer;
-}
-
 .complete {
     text-decoration: line-through;
+    cursor: pointer;
 }
 
 .todo {
@@ -34,7 +31,7 @@
     align-items: center;
     overflow: hidden;
     width: 23vw;
-    cursor: default;
+    cursor: pointer;
 }
 
 :where(.remove-button, .cancle, .edit-button):hover {
