@@ -16,12 +16,22 @@
     width: 21vw;
 }
 
+.todo-wrapper:hover {
+    transition: 0.1s;
+    background: #ff7543;
+}
+
+.complete {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
 .todo {
     display: flex;
     align-items: center;
     overflow: hidden;
     width: 23vw;
-    cursor: default;
+    cursor: pointer;
 }
 
 :where(.remove-button, .cancle, .edit-button):hover {

@@ -4,7 +4,7 @@ import { TbEditCircle, TbEditCircleOff } from 'react-icons/tb'
 
 import { CgRemove } from 'react-icons/cg';
 
-function Todo({ tasks, removeTask, editTask }) {
+function Todo({ tasks, removeTask, editTask, completeTask }) {
   const [editing, setEditing] = useState(null);
   const [editText, setEditText] = useState('');
 
@@ -23,7 +23,7 @@ function Todo({ tasks, removeTask, editTask }) {
   return (
     tasks.map((task) => (
       <div className='todo-wrapper' key={task.id}>
-        <div className='todo'>
+        <div className={task.status ? 'complete' : 'todo'} onClick={() => completeTask(task.id)}>
           {editing === task.id
           ? 
           <form className='edit-form' onSubmit={ (e) => handleSubmit(e, task.id, editText)}>
