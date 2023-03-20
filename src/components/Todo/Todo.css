@@ -64,7 +64,7 @@
   
 
 .edit-input::placeholder {
-    color: #8A9499;
+    color: rgba(225, 225, 225, 0.6);
     font-size: calc(1rem + 0.4vw);
 }
 
