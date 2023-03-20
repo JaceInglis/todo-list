@@ -10,7 +10,11 @@ function TodoList() {
   const [tasks, setTasks] = useState([]);
 
   const addTask = (task) => {
-    setTasks([...tasks, { id: nextId += 1, task: task }]);
+    setTasks([...tasks, { id: nextId += 1, task: task, status: false}]);
+  }
+
+  const completeTask = (id) => {
+    setTasks(prevTasks => prevTasks.map(task => task.id === id ? {...task, status: !task.status} : {...task, status: task.status}))
   }
 
   const removeTask = (id) => {
@@ -20,13 +24,13 @@ function TodoList() {
   };
 
   const editTask = (id, editedTask) => {
-    setTasks(prevTasks => prevTasks.map(task => task.id === id ? {id:id, task:editedTask} : {id:task.id, task:task.task}))
+    setTasks(prevTasks => prevTasks.map(task => task.id === id ? {...task, task:editedTask} : {...task, task:task.task}))
   }
 
   return (
     <div className='list-wrapper'>
       <TodoForm addTask={addTask} />
-      <Todo tasks={tasks} removeTask={removeTask} editTask={editTask} />
+      <Todo tasks={tasks} removeTask={removeTask} editTask={editTask} completeTask={completeTask} />
     </div>
   )
 }

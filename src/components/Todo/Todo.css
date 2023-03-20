@@ -16,6 +16,19 @@
     width: 21vw;
 }
 
+.todo-wrapper:hover {
+    transition: 0.1s;
+    background: #ff7543;
+}
+
+.todo:hover {
+    cursor: pointer;
+}
+
+.complete {
+    text-decoration: line-through;
+}
+
 .todo {
     display: flex;
     align-items: center;
