@@ -1,7 +1,6 @@
 .todo-wrapper {
     font-family: 'Open Sans', sans-serif;
     display: flex;
-    justify-content: space-between;
     background: #F95E27;
     border-radius: 8px;
     align-items: center;
@@ -16,34 +15,29 @@
     width: 21vw;
 }
 
-.todo-wrapper:hover {
-    transition: 0.1s;
-    background: #ff7543;
-}
-
 .complete {
     text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 20vw;
     cursor: pointer;
+    margin-right: 7px;
+
 }
 
 .todo {
     display: flex;
     align-items: center;
     overflow: hidden;
-    width: 23vw;
+    width: 20vw;
     cursor: pointer;
-}
-
-:where(.remove-button, .cancle, .edit-button):hover {
-    transition: 0.3s;
-    color: #8A9499;
-    cursor: pointer;
+    margin-right: 7px;
 }
 
 .edit-form {
     display: flex;
     align-items: center;
-    height: 100%;
 }
 
 .edit-input {
@@ -53,9 +47,7 @@
     color: #fff;
     cursor: text;
     width: 20vw;
-    height: 100%;
-    font-size: calc(1rem + 0.4vw)
-    
+    font-size: calc(1rem + 0.4vw);
 }
 
 .edit-input:focus {
@@ -64,12 +56,42 @@
   
 
 .edit-input::placeholder {
-    color: white;
+    color: rgba(225, 225, 225, 0.6);
     font-size: calc(1rem + 0.4vw);
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1100px) {
     .todo-wrapper {
         width: 40vw;
+    }
+
+    div.todo, div.complete, .edit-input {
+       width: 35vw; 
+    }
+}
+
+@media (hover: hover) {
+    :where(.remove-button, .cancle, .edit-button):hover {
+        transition: 0.3s;
+        color: #8A9499;
+        cursor: pointer;
+    }
+
+    .todo-wrapper:hover {
+        transition: 0.1s;
+        background: #ff7543;
+    }
+}
+
+@media (hover: none) {
+    :where(.remove-button, .cancle, .edit-button):active {
+        transition: 0.1s;
+        border-radius: 20px;
+        background-color: #8A9499;
+    }
+
+    .todo-wrapper:active {
+        background: #ff7543;
+        -webkit-tap-highlight-color: transparent;
     }
 }
