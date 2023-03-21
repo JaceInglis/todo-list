@@ -15,7 +15,7 @@ button {
 
 .form input {
     width:  12vw;
-    padding: 5px;
+    padding: 0.5vw;
 }
 
 .add-button {
@@ -26,22 +26,31 @@ button {
     color: white;
     width: 25px;
     height: 25px;
-    transition: 0.3s;
 }
 
-.add-button:hover {
-    color: #8A9499;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1100px) {
     .form input {
         width: 20vw;
-        padding: 0px;
     }
 
     .add-button {
         width: 20px;
         height: 20px;
+    }
+}
+
+@media (hover: hover) {
+    .add-button:hover {
+        color: #8A9499;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+}
+
+@media (hover: none) {
+    .add-button:active {
+        transition: 0.1s;
+        border-radius: 20px;
+        background-color: #8A9499;
     }
 }
